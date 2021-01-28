@@ -1,0 +1,17 @@
+version: '3.7'
+
+services:
+  mc:
+    image: 'itzg/minecraft-server:1.11.0-multiarch'
+    environment:
+      EULA: 'true'
+      MEMORY: '3328M'
+      VERSION: '1.16.4'
+      TYPE: PAPER
+      VIEW_DISTANCE: 10
+      SPAWN_PROTECTION: 0
+      CONSOLE: 'false'
+    ports:
+      - 25565:25565
+    volumes:
+      - ./data/:/data
